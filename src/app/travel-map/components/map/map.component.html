@@ -3,7 +3,8 @@
     height="100%"
     width="100%"
     [center]="location.latlng"
-    [zoom]="location.zoom">
+    [zoom]="location.zoom"
+    (mapDragend)="onMapDragend()">
     <map-marker
         *ngFor="let spot of spots"
         [position]="spot.marker.location"

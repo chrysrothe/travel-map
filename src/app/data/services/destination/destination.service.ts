@@ -45,9 +45,7 @@ export class DestinationService {
 
   public getLocationByDestination(destinationKey: string): Observable<Location> {
     return this.getDestination(destinationKey).pipe(
-      map((destination: Destination) => {
-        console.log(destination.location);
-        return destination.location;})
+      map((destination: Destination) => destination.location)
     );
   }
 }

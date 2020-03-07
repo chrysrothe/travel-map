@@ -6,11 +6,6 @@ import { Destination } from 'src/app/data/models/destination.model';
   templateUrl: './destination-list.component.html',
   styleUrls: ['./destination-list.component.less']
 })
-export class DestinationListComponent implements OnInit {
+export class DestinationListComponent {
   @Input() destinations: Destination[];
-
-  constructor() { }
-
-  ngOnInit(): void {}
-
 }

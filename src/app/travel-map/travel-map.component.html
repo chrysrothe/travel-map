@@ -2,7 +2,8 @@
     <div class="map-container">
         <app-map 
             [location]="location$ | async"
-            [spots]="spots">
+            [spots]="spots"
+            (centerChange)="onMapCenterChange($event)">
         </app-map>
         <app-side-bar [isActive]="true">
             <app-destination-list [destinations]="destinations$ | async"></app-destination-list>
