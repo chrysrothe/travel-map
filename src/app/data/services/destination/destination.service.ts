@@ -7,7 +7,7 @@ import { world } from '../../data/world';
 
 @Injectable()
 export class DestinationService {
-  public getRootDestination(): Observable<Destination> {
+  private getRootDestination(): Observable<Destination> {
     return of(world);
   }
 
@@ -22,6 +22,12 @@ export class DestinationService {
 
         return spots;
       })
+    );
+  }
+
+  public getAllDestinations(): Observable<Destination[]> {
+    return this.getRootDestination().pipe(
+      map((root: Destination) => root.destinations)
     );
   }
 }
