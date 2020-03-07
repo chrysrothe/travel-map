@@ -2,8 +2,10 @@ import { Destination } from '../models/destination.model';
 
 export const canada: Destination = {
     key: 'canada',
-    location: new google.maps.LatLng(51.01363017310777, -121.02266082399416),
-    zoom: 7,
+    location: {
+        latlng: new google.maps.LatLng(51.01363017310777, -121.02266082399416),
+        zoom: 7,
+    },
     name: 'Canada',
     picture: '../assets/pictures/canada/lg/canada_1.jpg',
     slogan: 'Epic Road Trip through the Rockies',

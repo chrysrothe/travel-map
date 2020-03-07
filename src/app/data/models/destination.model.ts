@@ -3,8 +3,7 @@ import { Marker } from './marker.model';
 export interface Destination {
     key: string;
     name: string;
-    location: google.maps.LatLng;
-    zoom: number;
+    location: Location;
     slogan?: string;
     spots?: Spot[];
     picture?: string;
@@ -15,4 +14,9 @@ export interface Spot {
     name: string;
     picture: string;
     marker: Marker;
+}
+
+export interface Location {
+    latlng: google.maps.LatLng;
+    zoom: number;
 }

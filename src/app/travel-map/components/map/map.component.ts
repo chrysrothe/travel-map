@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Spot } from 'src/app/data/models/destination.model';
+import { Spot, Location } from 'src/app/data/models/destination.model';
 
 @Component({
   selector: 'app-map',
@@ -8,10 +8,12 @@ import { Spot } from 'src/app/data/models/destination.model';
 })
 export class MapComponent implements OnInit {
   @Input() public spots: Spot[];
+  @Input() public location: Location;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.location);
   }
 
 }

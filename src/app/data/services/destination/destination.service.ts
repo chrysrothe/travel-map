@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Destination, Spot } from '../../models/destination.model';
+import { Destination, Spot, Location } from '../../models/destination.model';
 import { world } from '../../data/world';
 
 @Injectable()
@@ -28,6 +28,26 @@ export class DestinationService {
   public getAllDestinations(): Observable<Destination[]> {
     return this.getRootDestination().pipe(
       map((root: Destination) => root.destinations)
+    );
+  }
+
+  public getDestination(destinationKey: string): Observable<Destination> {
+    return this.getRootDestination().pipe(
+      map((root: Destination) => {
+        if (root.name === destinationKey) {
+          return root;
+        }
+
+        return root.destinations.find((destination: Destination) => destination.key === destinationKey) ?? root;
+      }),
+    );
+  }
+
+  public getLocationByDestination(destinationKey: string): Observable<Location> {
+    return this.getDestination(destinationKey).pipe(
+      map((destination: Destination) => {
+        console.log(destination.location);
+        return destination.location;})
     );
   }
 }

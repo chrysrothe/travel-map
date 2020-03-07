@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DestinationService } from '../data/services/destination/destination.service';
 import { Observable } from 'rxjs';
-import { Spot, Destination } from '../data/models/destination.model';
+import { switchMap } from 'rxjs/operators';
+import { Spot, Destination, Location} from '../data/models/destination.model';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-travel-map',
@@ -9,15 +11,25 @@ import { Spot, Destination } from '../data/models/destination.model';
   styleUrls: ['./travel-map.component.less']
 })
 export class TravelMapComponent implements OnInit {
-  public spots$: Observable<Spot[]>;
+  public location$: Observable<Location>;
   public destinations$: Observable<Destination[]>;
+  public spots$: Observable<Spot[]>;
 
-
-  constructor(private destinationService: DestinationService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private destinationService: DestinationService
+  ) {}
 
   ngOnInit(): void {
     this.spots$ = this.destinationService.getAllSpots();
     this.destinations$ = this.destinationService.getAllDestinations();
+
+    this.location$ = this.route.queryParamMap.pipe(
+      switchMap((params: ParamMap) => {
+        console.log(this.destinationService.getLocationByDestination(params.get('destination')));
+        return this.destinationService.getLocationByDestination(params.get('destination'));
+      })
+    );
   }
 
 }

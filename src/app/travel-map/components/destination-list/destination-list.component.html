@@ -5,6 +5,9 @@
 <section>
     <app-destination 
         *ngFor="let destination of destinations"
-        [destination]="destination">
+        [destination]="destination"
+        [routerLink]="[]" 
+        [queryParams]="{ destination: destination.key, latlng: destination.location.latlng.toUrlValue() }"
+        queryParamsHandling="merge">
     </app-destination>
 </section>
