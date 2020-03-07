@@ -4,9 +4,10 @@ import { CommonModule } from '@angular/common';
 import { TravelMapRoutingModule } from './travel-map-routing.module';
 
 import { TravelMapComponent } from './travel-map.component';
+import { MapComponent } from './components/map/map.component';
 
 @NgModule({
-  declarations: [TravelMapComponent],
+  declarations: [TravelMapComponent, MapComponent],
   imports: [
     CommonModule,
     TravelMapRoutingModule,
