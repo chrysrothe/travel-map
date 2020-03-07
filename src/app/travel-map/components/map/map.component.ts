@@ -13,6 +13,7 @@ export class MapComponent {
   @Input() public location: Location;
 
   @Output() public centerChange: EventEmitter<google.maps.LatLng> = new EventEmitter<google.maps.LatLng>();
+  @Output() public zoomChange: EventEmitter<number> = new EventEmitter<number>();
 
   @ViewChild(GoogleMap, { static: false }) map: GoogleMap;
 
@@ -22,4 +23,9 @@ export class MapComponent {
     );
   }
 
+  public onZoomChanged(): void {
+    this.zoomChange.emit(
+      this.map.getZoom()
+    );
+  }
 }

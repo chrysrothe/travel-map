@@ -52,4 +52,15 @@ export class TravelMapComponent implements OnInit {
     );
   }
 
+  onMapZoomChange(zoom: number): void {
+    this.router.navigate(
+      [],
+      {
+        relativeTo: this.route,
+        queryParams: { zoom },
+        queryParamsHandling: 'merge'
+      }
+    );
+  }
+
 }
