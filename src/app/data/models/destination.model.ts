@@ -7,6 +7,7 @@ export interface Destination {
     zoom: number;
     slogan?: string;
     spots?: Spot[];
+    picture?: string;
     destinations?: Destination[];
 }
 

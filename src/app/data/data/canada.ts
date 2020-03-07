@@ -5,6 +5,7 @@ export const canada: Destination = {
     location: new google.maps.LatLng(51.01363017310777, -121.02266082399416),
     zoom: 7,
     name: 'Canada',
+    picture: '../assets/pictures/canada/lg/canada_1.jpg',
     slogan: 'Epic Road Trip through the Rockies',
     spots: [
         {

@@ -9,9 +9,10 @@ import { MapComponent } from './components/map/map.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { TravelMapComponent } from './travel-map.component';
 import { DestinationListComponent } from './components/destination-list/destination-list.component';
+import { DestinationComponent } from './components/destination/destination.component';
 
 @NgModule({
-  declarations: [TravelMapComponent, MapComponent, SideBarComponent, DestinationListComponent],
+  declarations: [TravelMapComponent, MapComponent, SideBarComponent, DestinationListComponent, DestinationComponent],
   imports: [
     CommonModule,
     DataModule,

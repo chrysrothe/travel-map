@@ -2,3 +2,9 @@
 <header>
     <h1>Backpacking the World</h1>
 </header>
+<section>
+    <app-destination 
+        *ngFor="let destination of destinations"
+        [destination]="destination">
+    </app-destination>
+</section>
