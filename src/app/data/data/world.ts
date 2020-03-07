@@ -1,4 +1,5 @@
 import { Destination } from '../models/destination.model';
+import { canada } from './canada';
 
 export const world: Destination = {
     key: 'world',
@@ -6,5 +7,7 @@ export const world: Destination = {
     zoom: 2,
     name: 'World',
     slogan: 'There are so more places to visit',
-    picture: '../assets/pictures/canada/lg/canada_5.jpg',
+    destinations: [
+        canada,
+    ]
 };
