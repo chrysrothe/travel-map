@@ -14,7 +14,7 @@ export class DestinationService {
   public getAllSpots(): Observable<Spot[]> {
     return this.getRootDestination().pipe(
       map((root: Destination) => {
-        let spots: Spot[]
+        let spots: Spot[] = [];
 
         root.destinations.forEach((destination: Destination) => {
           spots = spots.concat(destination.spots);

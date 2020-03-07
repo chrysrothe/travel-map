@@ -1,5 +1,11 @@
 <google-map
     #mapElem
     height="100%"
-    width="100%">
+    width="100%"
+    [zoom]="3">
+    <map-marker
+        *ngFor="let spot of spots"
+        [position]="spot.marker.location"
+        [options]="spot.marker.options">
+    </map-marker>
 </google-map>

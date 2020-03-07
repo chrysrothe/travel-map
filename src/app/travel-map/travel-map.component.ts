@@ -14,7 +14,7 @@ export class TravelMapComponent implements OnInit {
   constructor(private destinationService: DestinationService) {}
 
   ngOnInit(): void {
-    this.ngOnInit = this.destinationService.getAllSpots;
+    this.spots$ = this.destinationService.getAllSpots();
   }
 
 }

@@ -1,4 +1,6 @@
-<div class="map-container">
-    <app-map></app-map>
-    <app-side-bar [isActive]="true"></app-side-bar>
-</div>
+<ng-container *ngIf="spots$ | async as spots">
+    <div class="map-container">
+        <app-map [spots]="spots"></app-map>
+        <app-side-bar [isActive]="true"></app-side-bar>
+    </div>
+</ng-container>
