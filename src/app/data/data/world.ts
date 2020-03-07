@@ -1,5 +1,6 @@
 import { Destination } from '../models/destination.model';
 import { canada } from './canada';
+import { singapore } from './singapore';
 
 export const world: Destination = {
     key: 'world',
@@ -11,5 +12,6 @@ export const world: Destination = {
     slogan: 'There are so more places to visit',
     destinations: [
         canada,
+        singapore,
     ]
 };
