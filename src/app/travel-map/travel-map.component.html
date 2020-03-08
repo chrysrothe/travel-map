@@ -11,4 +11,12 @@
             <app-destination-list [destinations]="destinations$ | async"></app-destination-list>
         </app-side-bar>
     </div>
+    <ng-container *ngIf="destinationForLightBox$ | async as destination">
+        <app-light-box
+            [isActive]="isLightBoxActive"
+            [spot]="clickedSpot"
+            [destination]="destination"
+            (closeClick)="onLightBoxCloseClick()">
+        </app-light-box>
+    </ng-container>
 </ng-container>

@@ -15,6 +15,9 @@ export class TravelMapComponent implements OnInit {
   public spots$: Observable<Spot[]>;
   public destinationForLightBox$: Observable<Destination>;
 
+  public isLightBoxActive: boolean = false;
+  public clickedSpot: Spot;
+
   constructor(
     private destinationService: DestinationService,
     private locationService: LocationService,
@@ -35,6 +38,12 @@ export class TravelMapComponent implements OnInit {
   }
 
   public onMapSpotClick(spot: Spot): void {
+    this.clickedSpot = spot;
+    this.isLightBoxActive = true;
     this.destinationForLightBox$ = this.destinationService.getDestination(spot.destinatonKey);
+  }
+
+  public onLightBoxCloseClick(): void {
+    this.isLightBoxActive = false;
   }
 }

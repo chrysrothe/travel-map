@@ -1,0 +1,34 @@
+<div 
+    class="picture-container" 
+    *ngIf="spot">
+    <header>
+        <div>
+            <h1>{{ destination.name }} ({{ position }}/{{ destination.spots.length }})</h1>
+            <p class="sub-label">{{ destination.slogan }}</p>
+        </div>
+        <span 
+            class="close" 
+            (click)="onCloseClick()">
+            (close)
+        </span> 
+    </header>
+    <figure>
+        <img [src]="spot.picture">
+        <a 
+            class="prev" 
+            (click)="onSlideClick(-1)">
+            &#10094;
+        </a>
+        <a 
+            class="next" 
+            (click)="onSlideClick(1)">
+            &#10095;
+        </a>
+        <figcaption>
+            <span class="location">
+                {{ spot.marker.location.toString() }}
+            </span>
+            {{ spot.name }}
+        </figcaption>
+    </figure>
+</div>
