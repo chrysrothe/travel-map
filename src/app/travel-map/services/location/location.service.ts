@@ -4,6 +4,7 @@ import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { Location } from 'src/app/data/models/destination.model';
 import { Router, ActivatedRoute, ParamMap, Params } from '@angular/router';
+import { QueryParamsEnum } from '../../enums/params.enum';
 
 @Injectable()
 export class LocationService {
@@ -16,16 +17,16 @@ export class LocationService {
   public getLocation(): Observable<Location> {
     return this.route.queryParamMap.pipe(
       switchMap((params: ParamMap) => {
-        if (params.get('latlng') && params.get('zoom')) {
-          const latlng = params.get('latlng').split(',').map(x => +x);
+        if (params.get(QueryParamsEnum.LatLng) && params.get(QueryParamsEnum.Zoom)) {
+          const latlng = params.get(QueryParamsEnum.LatLng).split(',').map(x => +x);
 
           return of({
             latlng: new google.maps.LatLng(latlng[0], latlng[1]),
-            zoom: parseInt(params.get('zoom'), 10),
+            zoom: parseInt(params.get(QueryParamsEnum.Zoom), 10),
           } as unknown as Location);
         }
 
-        return this.destinationService.getLocationByDestination(params.get('destination'));
+        return this.destinationService.getLocationByDestination(params.get(QueryParamsEnum.Destination));
       })
     );
   }
