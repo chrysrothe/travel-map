@@ -14,5 +14,5 @@ export const world: Destination = {
     destinations: [
         canada,
         singapore,
-    ]
+    ],
 };

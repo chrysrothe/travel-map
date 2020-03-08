@@ -27,6 +27,7 @@ export const singapore: Destination = {
                     }
                 },
             },
+            destinatonKey: DestinationEnum.Singapore,
         },
         {
             name: 'Marlon',
@@ -43,6 +44,7 @@ export const singapore: Destination = {
                     },
                 },
             },
+            destinatonKey: DestinationEnum.Singapore,
         },
     ],
 };

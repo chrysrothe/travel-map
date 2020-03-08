@@ -27,6 +27,7 @@ export const canada: Destination = {
                     }
                 },
             },
+            destinatonKey: DestinationEnum.Canada,
         },
         {
             name: 'Wap Lake',
@@ -42,7 +43,8 @@ export const canada: Destination = {
                         },
                     }
                 },
-            }
+            },
+            destinatonKey: DestinationEnum.Canada,
         },
         {
             name: 'Lookout, Mt Revelstoke National Park',
@@ -59,6 +61,7 @@ export const canada: Destination = {
                     }
                 },
             },
+            destinatonKey: DestinationEnum.Canada,
         },
         {
             name: 'Mt Revelstoke National Park',
@@ -74,7 +77,8 @@ export const canada: Destination = {
                         },
                     }
                 },
-            }
+            },
+            destinatonKey: DestinationEnum.Canada,
         },
         {
             name: 'Mt Revelstoke National Park',
@@ -91,6 +95,7 @@ export const canada: Destination = {
                     },
                 },
             },
+            destinatonKey: DestinationEnum.Canada,
         },
         {
             name: 'Glacier National Park',
@@ -107,6 +112,7 @@ export const canada: Destination = {
                     },
                 },
             },
+            destinatonKey: DestinationEnum.Canada,
         },
         {
             name: 'Glacier National Park',
@@ -123,6 +129,7 @@ export const canada: Destination = {
                     },
                 },
             },
+            destinatonKey: DestinationEnum.Canada,
         },
         {
             name: 'Bow River',
@@ -138,7 +145,8 @@ export const canada: Destination = {
                         },
                     },
                 },
-            }
+            },
+            destinatonKey: DestinationEnum.Canada,
         },
         {
             name: 'Cascade of Time Garden, Banff',
@@ -155,6 +163,7 @@ export const canada: Destination = {
                     },
                 },
             },
+            destinatonKey: DestinationEnum.Canada,
         },
     ],
 };

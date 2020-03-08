@@ -15,6 +15,7 @@ export interface Spot {
     name: string;
     picture: string;
     marker: Marker;
+    destinatonKey?;
 }
 
 export interface Location {
