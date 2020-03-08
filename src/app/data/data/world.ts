@@ -2,6 +2,7 @@ import { Destination } from '../models/destination.model';
 import { canada } from './canada';
 import { singapore } from './singapore';
 import { DestinationEnum } from '../enums/destination.enum';
+import { hongkong } from './hongkong';
 
 export const world: Destination = {
     key: DestinationEnum.World,
@@ -14,5 +15,6 @@ export const world: Destination = {
     destinations: [
         canada,
         singapore,
+        hongkong,
     ],
 };
