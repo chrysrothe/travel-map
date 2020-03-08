@@ -1,7 +1,8 @@
 import { Destination } from '../models/destination.model';
+import { DestinationEnum } from '../enums/destination.enum';
 
 export const singapore: Destination = {
-    key: 'singapore',
+    key: DestinationEnum.Singapore,
     location: {
         latlng: new google.maps.LatLng(1.3500583219037285, 103.86564515872486),
         zoom: 11,
