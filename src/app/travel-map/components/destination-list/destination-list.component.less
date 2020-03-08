@@ -17,8 +17,17 @@ header {
 }
 
 h1 {
+    text-align: center;
     font-size: 1.2rem;
     text-transform: uppercase;
+    color: @text-main;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    color: @text-light;
+    text-align: center;
 }
 
 section {
@@ -29,4 +38,19 @@ section {
 
 app-destination {
     margin-bottom: 15px;
+}
+
+.icon-list {
+    display: flex;
+    margin-top: 10px;
+    color: @text-light;
+    padding: 10px 0;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
 }
