@@ -3,4 +3,5 @@ export enum DestinationEnum {
     Singapore = 'singapore',
     Canada = 'canada',
     HongKong = 'hongkong',
+    Australia = 'australia',
 }

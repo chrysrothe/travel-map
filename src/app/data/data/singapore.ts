@@ -10,7 +10,7 @@ export const singapore: Destination = {
     name: 'Singapore',
     slogan: 'What a modern city',
     picture: '../assets/pictures/singapore/lg/singapore_1.jpg',
-    date: new Date(2017, 7),
+    date: new Date(2017, 6),
     spots: [
         {
             name: 'Gardens by the Bay',

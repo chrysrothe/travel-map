@@ -10,7 +10,7 @@ export const canada: Destination = {
     name: 'Canada',
     picture: '../assets/pictures/canada/lg/canada_1.jpg',
     slogan: 'Epic Road Trip through the Rockies',
-    date: new Date(2019, 9),
+    date: new Date(2019, 8),
     spots: [
         {
             name: 'Lakeshore, Summerland',
