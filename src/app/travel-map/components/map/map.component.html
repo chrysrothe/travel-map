@@ -9,6 +9,7 @@
     <map-marker
         *ngFor="let spot of spots"
         [position]="spot.marker.location"
-        [options]="spot.marker.options">
+        [options]="spot.marker.options"
+        (mapClick)="onMarkerClicked(spot)">
     </map-marker>
 </google-map>

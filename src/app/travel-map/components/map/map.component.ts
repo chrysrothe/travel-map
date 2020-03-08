@@ -14,6 +14,7 @@ export class MapComponent {
 
   @Output() public centerChange: EventEmitter<google.maps.LatLng> = new EventEmitter<google.maps.LatLng>();
   @Output() public zoomChange: EventEmitter<number> = new EventEmitter<number>();
+  @Output() public spotClick: EventEmitter<Spot> = new EventEmitter<Spot>();
 
   @ViewChild(GoogleMap, { static: false }) map: GoogleMap;
 
@@ -31,5 +32,9 @@ export class MapComponent {
     this.zoomChange.emit(
       this.map.getZoom()
     );
+  }
+
+  public onMarkerClicked(spot: Spot) {
+    this.spotClick.emit(spot);
   }
 }

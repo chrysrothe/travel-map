@@ -4,7 +4,8 @@
             [location]="location$ | async"
             [spots]="spots"
             (centerChange)="onMapCenterChange($event)"
-            (zoomChange)="onMapZoomChange($event)">
+            (zoomChange)="onMapZoomChange($event)"
+            (spotClick)="onMapSpotClick($event)">
         </app-map>
         <app-side-bar [isActive]="true">
             <app-destination-list [destinations]="destinations$ | async"></app-destination-list>

@@ -13,6 +13,7 @@ export class TravelMapComponent implements OnInit {
   public location$: Observable<Location>;
   public destinations$: Observable<Destination[]>;
   public spots$: Observable<Spot[]>;
+  public destinationForLightBox$: Observable<Destination>;
 
   constructor(
     private destinationService: DestinationService,
@@ -29,7 +30,11 @@ export class TravelMapComponent implements OnInit {
     this.locationService.updateQueryParams({ latlng: center.toUrlValue() });
   }
 
-  onMapZoomChange(zoom: number): void {
+  public onMapZoomChange(zoom: number): void {
     this.locationService.updateQueryParams({ zoom });
+  }
+
+  public onMapSpotClick(spot: Spot): void {
+    this.destinationForLightBox$ = this.destinationService.getDestination(spot.destinatonKey);
   }
 }
