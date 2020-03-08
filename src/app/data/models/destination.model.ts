@@ -4,6 +4,7 @@ export interface Destination {
     key: string;
     name: string;
     location: Location;
+    date?: Date;
     slogan?: string;
     spots?: Spot[];
     picture?: string;

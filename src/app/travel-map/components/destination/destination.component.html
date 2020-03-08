@@ -5,4 +5,10 @@
 <div class="destination-content">
     <h2>{{ destination.name }}</h2>
     <p>{{ destination.slogan }}</p>
+    <p 
+        *ngIf="destination.date"
+        class="date">
+        <i class="fas fa-calendar-alt"></i> 
+        {{ destination.date | date: 'MMMM, yyyy' }}
+    </p>
 </div>
