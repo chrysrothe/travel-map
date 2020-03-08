@@ -8,5 +8,5 @@ import { Destination, Spot } from 'src/app/data/models/destination.model';
 })
 export class DestinationListComponent {
   @Input() destinations: Destination[];
-  @Input() titleSpot: Spot[];
+  @Input() titleSpot: Spot;
 }
