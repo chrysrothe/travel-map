@@ -13,6 +13,7 @@ export class TravelMapComponent implements OnInit {
   public location$: Observable<Location>;
   public destinations$: Observable<Destination[]>;
   public spots$: Observable<Spot[]>;
+  public randomSpot$: Observable<Spot>;
   public destinationForLightBox$: Observable<Destination>;
 
   public isLightBoxActive: boolean = false;
@@ -27,6 +28,7 @@ export class TravelMapComponent implements OnInit {
     this.spots$ = this.destinationService.getAllSpots();
     this.destinations$ = this.destinationService.getAllDestinations();
     this.location$ = this.locationService.getLocation();
+    this.randomSpot$ = this.destinationService.getRandomSpot();
   }
 
   public onMapCenterChange(center: google.maps.LatLng): void {

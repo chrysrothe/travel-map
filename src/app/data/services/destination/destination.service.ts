@@ -48,4 +48,10 @@ export class DestinationService {
       map((destination: Destination) => destination.location)
     );
   }
+
+  public getRandomSpot(): Observable<Spot> {
+    return this.getAllSpots().pipe(
+      map((spots: Spot[]) => spots[Math.floor(Math.random() * spots.length - 1)])
+    );
+  }
 }

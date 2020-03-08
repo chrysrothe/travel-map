@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Destination } from 'src/app/data/models/destination.model';
+import { Destination, Spot } from 'src/app/data/models/destination.model';
 
 @Component({
   selector: 'app-destination-list',
@@ -8,4 +8,5 @@ import { Destination } from 'src/app/data/models/destination.model';
 })
 export class DestinationListComponent {
   @Input() destinations: Destination[];
+  @Input() titleSpot: Spot[];
 }
