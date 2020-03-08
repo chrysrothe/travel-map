@@ -24,6 +24,10 @@ export class MapComponent {
   }
 
   public onZoomChanged(): void {
+    if (this.map === undefined) {
+      return;
+    }
+
     this.zoomChange.emit(
       this.map.getZoom()
     );
