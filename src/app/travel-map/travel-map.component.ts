@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DestinationService } from '../data/services/destination/destination.service';
-import { Observable, of } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 import { Spot, Destination, Location} from '../data/models/destination.model';
-import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { LocationService } from './services/location/location.service';
 
 @Component({
   selector: 'app-travel-map',
@@ -16,51 +15,21 @@ export class TravelMapComponent implements OnInit {
   public spots$: Observable<Spot[]>;
 
   constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private destinationService: DestinationService
+    private destinationService: DestinationService,
+    private locationService: LocationService,
   ) {}
 
   ngOnInit(): void {
     this.spots$ = this.destinationService.getAllSpots();
     this.destinations$ = this.destinationService.getAllDestinations();
-
-    this.location$ = this.route.queryParamMap.pipe(
-      switchMap((params: ParamMap) => {
-        if (params.get('latlng') && params.get('zoom')) {
-          const latlng = params.get('latlng').split(',').map(x => +x);
-
-          return of({
-            latlng: new google.maps.LatLng(latlng[0], latlng[1]),
-            zoom: parseInt(params.get('zoom'), 10),
-          } as unknown as Location);
-        }
-
-        return this.destinationService.getLocationByDestination(params.get('destination'));
-      })
-    );
+    this.location$ = this.locationService.getLocation();
   }
 
   public onMapCenterChange(center: google.maps.LatLng): void {
-    this.router.navigate(
-      [],
-      {
-        relativeTo: this.route,
-        queryParams: { latlng: center.toUrlValue() },
-        queryParamsHandling: 'merge'
-      }
-    );
+    this.locationService.updateQueryParams({ latlng: center.toUrlValue() });
   }
 
   onMapZoomChange(zoom: number): void {
-    this.router.navigate(
-      [],
-      {
-        relativeTo: this.route,
-        queryParams: { zoom },
-        queryParamsHandling: 'merge'
-      }
-    );
+    this.locationService.updateQueryParams({ zoom });
   }
-
 }

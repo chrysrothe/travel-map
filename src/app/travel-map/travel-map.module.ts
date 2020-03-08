@@ -11,13 +11,24 @@ import { TravelMapComponent } from './travel-map.component';
 import { DestinationListComponent } from './components/destination-list/destination-list.component';
 import { DestinationComponent } from './components/destination/destination.component';
 
+import { LocationService } from './services/location/location.service';
+
 @NgModule({
-  declarations: [TravelMapComponent, MapComponent, SideBarComponent, DestinationListComponent, DestinationComponent],
+  declarations: [
+    TravelMapComponent,
+    MapComponent,
+    SideBarComponent,
+    DestinationListComponent,
+    DestinationComponent
+  ],
   imports: [
     CommonModule,
     DataModule,
     GoogleMapsModule,
     TravelMapRoutingModule,
+  ],
+  providers: [
+    LocationService,
   ]
 })
 export class TravelMapModule { }
