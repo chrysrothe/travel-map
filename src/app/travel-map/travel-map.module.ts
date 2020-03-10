@@ -15,6 +15,7 @@ import { LocationService } from './services/location/location.service';
 import { LightBoxComponent } from './components/light-box/light-box.component';
 import { MapLocationService } from './services/map-location/map-location.service';
 import { SideBarFooterComponent } from './components/side-bar-footer/side-bar-footer.component';
+import { WindowService } from './services/window/window.service';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { SideBarFooterComponent } from './components/side-bar-footer/side-bar-fo
   providers: [
     LocationService,
     MapLocationService,
+    WindowService,
   ]
 })
 export class TravelMapModule { }

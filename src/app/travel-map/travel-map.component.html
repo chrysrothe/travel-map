@@ -15,7 +15,10 @@
                 </app-destination-list>
             </div>
             <div class="footer">
-                <app-side-bar-footer></app-side-bar-footer>
+                <app-side-bar-footer
+                    (imprintClick)="onSideBarFooterImprintClick()"
+                    (privacyClick)="onSideBarFooterPrivacyClick()">
+                </app-side-bar-footer>
             </div>
         </app-side-bar>
     </div>

@@ -50,4 +50,12 @@ export class TravelMapComponent implements OnInit {
   public onLightBoxCloseClick(): void {
     this.isLightBoxActive = false;
   }
+
+  public onSideBarFooterPrivacyClick(): void {
+    this.locationService.redirectToPrivacy();
+  }
+
+  public onSideBarFooterImprintClick(): void {
+    this.locationService.redirectToImprint();
+  }
 }
