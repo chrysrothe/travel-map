@@ -8,10 +8,15 @@
             (spotClick)="onMapSpotClick($event)">
         </app-map>
         <app-side-bar [isActive]="true">
-            <app-destination-list
-                [titleSpot]="randomSpot$ | async"
-                [destinations]="destinations$ | async">
-            </app-destination-list>
+            <div class="main">
+                <app-destination-list
+                    [titleSpot]="randomSpot$ | async"
+                    [destinations]="destinations$ | async">
+                </app-destination-list>
+            </div>
+            <div class="footer">
+                <app-side-bar-footer></app-side-bar-footer>
+            </div>
         </app-side-bar>
     </div>
     <ng-container *ngIf="destinationForLightBox$ | async as destination">

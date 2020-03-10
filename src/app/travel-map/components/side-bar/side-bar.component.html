@@ -1,12 +1,8 @@
 <section>
-    <ng-content></ng-content>
+    <ng-content select=".main"></ng-content>
 </section>
 <footer>
-    <ul>
-        <li>About</li>
-        <li>Privacy</li>
-        <li>Imprint</li>
-    </ul>
+    <ng-content select=".footer"></ng-content>
 </footer>
 <span (click)="toggleSideBarOpen()">
     <i class="fas fa-angle-right fa-2x"></i>

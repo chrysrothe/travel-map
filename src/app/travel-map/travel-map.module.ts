@@ -14,6 +14,7 @@ import { DestinationComponent } from './components/destination/destination.compo
 import { LocationService } from './services/location/location.service';
 import { LightBoxComponent } from './components/light-box/light-box.component';
 import { MapLocationService } from './services/map-location/map-location.service';
+import { SideBarFooterComponent } from './components/side-bar-footer/side-bar-footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MapLocationService } from './services/map-location/map-location.service
     SideBarComponent,
     DestinationListComponent,
     DestinationComponent,
-    LightBoxComponent
+    LightBoxComponent,
+    SideBarFooterComponent
   ],
   imports: [
     CommonModule,
