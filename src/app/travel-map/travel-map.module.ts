@@ -13,6 +13,7 @@ import { DestinationComponent } from './components/destination/destination.compo
 
 import { LocationService } from './services/location/location.service';
 import { LightBoxComponent } from './components/light-box/light-box.component';
+import { MapLocationService } from './services/map-location/map-location.service';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { LightBoxComponent } from './components/light-box/light-box.component';
   ],
   providers: [
     LocationService,
+    MapLocationService,
   ]
 })
 export class TravelMapModule { }

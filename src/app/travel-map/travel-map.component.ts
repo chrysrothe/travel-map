@@ -3,6 +3,7 @@ import { DestinationService } from '../data/services/destination/destination.ser
 import { Observable } from 'rxjs';
 import { Spot, Destination, Location} from '../data/models/destination.model';
 import { LocationService } from './services/location/location.service';
+import { MapLocationService } from './services/map-location/map-location.service';
 
 @Component({
   selector: 'app-travel-map',
@@ -22,12 +23,13 @@ export class TravelMapComponent implements OnInit {
   constructor(
     private destinationService: DestinationService,
     private locationService: LocationService,
+    private mapLocationService: MapLocationService
   ) {}
 
   ngOnInit(): void {
     this.spots$ = this.destinationService.getAllSpots();
     this.destinations$ = this.destinationService.getAllDestinations();
-    this.location$ = this.locationService.getLocation();
+    this.location$ = this.mapLocationService.getLocation();
     this.randomSpot$ = this.destinationService.getRandomSpot();
   }
 
