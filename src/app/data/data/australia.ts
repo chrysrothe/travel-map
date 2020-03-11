@@ -2,6 +2,7 @@ import { Destination } from '../models/destination.model';
 import { DestinationEnum } from '../enums/destination.enum';
 import { perthSpots } from './perth-spots';
 import { sydneySpots } from './sydney-spots';
+import { westernAustraliaSpots } from './western-australia';
 
 export const australia: Destination = {
     key: DestinationEnum.Australia,
@@ -15,6 +16,7 @@ export const australia: Destination = {
     date: new Date(2015, 8),
     spots: [
        ...perthSpots,
+       ...westernAustraliaSpots,
        ...sydneySpots,
     ],
 };
