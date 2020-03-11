@@ -28,4 +28,8 @@ export class LocationService {
   public redirectToImprint(): void {
     this.windowService.window.open('https://christianrothe.blog/imprint');
   }
+
+  public redirectToInstagram(): void {
+    this.windowService.window.open('https://www.instagram.com/travelwithchrys/');
+  }
 }

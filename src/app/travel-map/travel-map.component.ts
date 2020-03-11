@@ -58,4 +58,8 @@ export class TravelMapComponent implements OnInit {
   public onSideBarFooterImprintClick(): void {
     this.locationService.redirectToImprint();
   }
+
+  public onSideBarFooterInstagramClick(): void {
+    this.locationService.redirectToInstagram();
+  }
 }

@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class SideBarFooterComponent {
   @Output() public privacyClick: EventEmitter<void> = new EventEmitter<void>();
   @Output() public imprintClick: EventEmitter<void> = new EventEmitter<void>();
+  @Output() public instagramClick: EventEmitter<void> = new EventEmitter<void>();
 
   public onPrivacyClick(): void {
     this.privacyClick.emit();
@@ -15,5 +16,9 @@ export class SideBarFooterComponent {
 
   public onImprintClick(): void {
     this.imprintClick.emit();
+  }
+
+  public onInstagramClick(): void {
+    this.instagramClick.emit();
   }
 }
