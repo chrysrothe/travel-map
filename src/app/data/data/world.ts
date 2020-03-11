@@ -6,6 +6,7 @@ import { singapore } from './singapore';
 import { hongkong } from './hongkong';
 import { australia } from './australia';
 import { cambodia } from './cambodia';
+import { switzerland } from './switzerland';
 
 export const world: Destination = {
     key: DestinationEnum.World,
@@ -17,6 +18,7 @@ export const world: Destination = {
     slogan: 'There are so more places to visit',
     destinations: [
         canada,
+        switzerland,
         cambodia,
         singapore,
         hongkong,

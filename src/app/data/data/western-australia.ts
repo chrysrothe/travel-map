@@ -122,12 +122,3 @@ export const westernAustraliaSpots: Spot[] = [
         destinatonKey: DestinationEnum.Australia,
     },
 ];
-
-
--25.899046, 113.546724
-
-
-
-
-
-
