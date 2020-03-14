@@ -44,6 +44,7 @@ export const cambodia: Destination = {
                     },
                 },
             },
+            cannotBeTitle: true,
             destinatonKey: DestinationEnum.Cambodia,
         },
     ],

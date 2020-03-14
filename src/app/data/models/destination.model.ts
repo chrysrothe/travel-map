@@ -1,7 +1,8 @@
 import { Marker } from './marker.model';
+import { DestinationEnum } from '../enums/destination.enum';
 
 export interface Destination {
-    key: string;
+    key: DestinationEnum;
     name: string;
     location: Location;
     date?: Date;
@@ -15,7 +16,8 @@ export interface Spot {
     name: string;
     picture: string;
     marker: Marker;
-    destinatonKey?;
+    destinatonKey?: DestinationEnum;
+    cannotBeTitle?: boolean;
 }
 
 export interface Location {

@@ -49,9 +49,23 @@ export class DestinationService {
     );
   }
 
-  public getRandomSpot(): Observable<Spot> {
+  public getRandomTitleSpot(): Observable<Spot> {
     return this.getAllSpots().pipe(
-      map((spots: Spot[]) => spots[Math.floor(Math.random() * spots.length - 1)])
+      map((spots: Spot[]) => {
+        let spot: Spot;
+        let cannotBeTitleSpot = false;
+
+        do {
+          spot = spots[Math.floor(Math.random() * spots.length - 1)];
+
+          if (spot.cannotBeTitle) {
+            cannotBeTitleSpot = true;
+          }
+        }
+        while (cannotBeTitleSpot);
+
+        return spot;
+      })
     );
   }
 }

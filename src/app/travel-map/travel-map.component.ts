@@ -32,7 +32,7 @@ export class TravelMapComponent implements OnInit {
     this.destinations$ = this.destinationService.getAllDestinations();
     this.location$ = this.mapLocationService.getLocation();
     this.zoom$ = this.mapLocationService.getZoom();
-    this.randomSpot$ = this.destinationService.getRandomSpot();
+    this.randomSpot$ = this.destinationService.getRandomTitleSpot();
   }
 
   public onMapCenterChange(center: google.maps.LatLng): void {
