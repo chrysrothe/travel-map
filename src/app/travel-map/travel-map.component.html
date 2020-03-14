@@ -2,6 +2,7 @@
     <div class="map-container">
         <app-map 
             [location]="location$ | async"
+            [zoom]="zoom$ | async"
             [spots]="spots"
             (centerChange)="onMapCenterChange($event)"
             (zoomChange)="onMapZoomChange($event)"

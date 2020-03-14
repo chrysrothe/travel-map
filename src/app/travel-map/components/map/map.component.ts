@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter, ViewChild } from '@angu
 import { Spot, Location } from 'src/app/data/models/destination.model';
 
 import { GoogleMap} from '@angular/google-maps';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-map',
@@ -10,7 +11,8 @@ import { GoogleMap} from '@angular/google-maps';
 })
 export class MapComponent {
   @Input() public spots: Spot[];
-  @Input() public location: Location;
+  @Input() public location: google.maps.LatLng;
+  @Input() public zoom: number;
 
   @Output() public centerChange: EventEmitter<google.maps.LatLng> = new EventEmitter<google.maps.LatLng>();
   @Output() public zoomChange: EventEmitter<number> = new EventEmitter<number>();
@@ -31,6 +33,10 @@ export class MapComponent {
 
     this.zoomChange.emit(
       this.map.getZoom()
+    );
+
+    this.centerChange.emit(
+      this.map.getCenter()
     );
   }
 

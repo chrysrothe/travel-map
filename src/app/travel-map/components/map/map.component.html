@@ -2,8 +2,8 @@
     #mapElem
     height="100%"
     width="100%"
-    [center]="location.latlng"
-    [zoom]="location.zoom"
+    [center]="location"
+    [zoom]="zoom"
     (mapDragend)="onMapDragend()"
     (zoomChanged)="onZoomChanged()">
     <map-marker

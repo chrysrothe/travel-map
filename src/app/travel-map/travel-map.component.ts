@@ -11,7 +11,8 @@ import { MapLocationService } from './services/map-location/map-location.service
   styleUrls: ['./travel-map.component.less']
 })
 export class TravelMapComponent implements OnInit {
-  public location$: Observable<Location>;
+  public location$: Observable<google.maps.LatLng>;
+  public zoom$: Observable<number>;
   public destinations$: Observable<Destination[]>;
   public spots$: Observable<Spot[]>;
   public randomSpot$: Observable<Spot>;
@@ -30,6 +31,7 @@ export class TravelMapComponent implements OnInit {
     this.spots$ = this.destinationService.getAllSpots();
     this.destinations$ = this.destinationService.getAllDestinations();
     this.location$ = this.mapLocationService.getLocation();
+    this.zoom$ = this.mapLocationService.getZoom();
     this.randomSpot$ = this.destinationService.getRandomSpot();
   }
 
