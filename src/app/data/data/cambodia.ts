@@ -31,7 +31,7 @@ export const cambodia: Destination = {
         },
         {
             name: 'Little Monkey',
-            picture: '../assets/pictures/cambodia/lg/monkey.jpg',
+            picture: '../assets/pictures/cambodia/lg/monkey2.jpg',
             marker: {
                 location: new google.maps.LatLng(13.411446, 103.866839),
                 options: {
