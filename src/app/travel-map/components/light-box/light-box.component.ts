@@ -50,7 +50,9 @@ export class LightBoxComponent implements OnChanges, AfterViewInit {
   }
 
   public ngOnChanges(): void {
+    this.hideImage = true;
     this.position = this.getPicturePosition();
+    this.loadImage();
   }
 
   @HostListener('window:resize')
@@ -76,7 +78,7 @@ export class LightBoxComponent implements OnChanges, AfterViewInit {
 
   public onSlideClick(slide: number): void {
     this.hideImage = true;
-    
+
     const lastIndex = this.destination.spots.length - 1;
     let nextIndex = this.getCurrentIndex() + slide;
 
