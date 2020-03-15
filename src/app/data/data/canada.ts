@@ -165,5 +165,124 @@ export const canada: Destination = {
             },
             destinatonKey: DestinationEnum.Canada,
         },
+        {
+            name: 'Bow Falls, Banff',
+            picture: '../assets/pictures/canada/lg/bow_falls.jpg',
+            marker: {
+                location: new google.maps.LatLng(51.166688, -115.560701),
+                options: {
+                    icon: {
+                        url: '../assets/pictures/canada/sm/bow_falls_sm.jpg',
+                        scaledSize: {
+                            height: 50,
+                            width: 75,
+                        },
+                    },
+                },
+            },
+            destinatonKey: DestinationEnum.Canada,
+        },
+        {
+            name: 'Bow River, Banff',
+            picture: '../assets/pictures/canada/lg/banff_river.jpg',
+            marker: {
+                location: new google.maps.LatLng(51.165988, -115.558179),
+                options: {
+                    icon: {
+                        url: '../assets/pictures/canada/sm/banff_river_sm.jpg',
+                        scaledSize: {
+                            height: 50,
+                            width: 75,
+                        },
+                    },
+                },
+            },
+            destinatonKey: DestinationEnum.Canada,
+        },
+        {
+            name: 'Bow River, Banff',
+            picture: '../assets/pictures/canada/lg/banff_river_2.jpg',
+            marker: {
+                location: new google.maps.LatLng(51.173486, -115.574636),
+                options: {
+                    icon: {
+                        url: '../assets/pictures/canada/sm/banff_river_2_sm.jpg',
+                        scaledSize: {
+                            height: 50,
+                            width: 75,
+                        },
+                    },
+                },
+            },
+            destinatonKey: DestinationEnum.Canada,
+        },
+        {
+            name: 'Brewster Creek, Banff',
+            picture: '../assets/pictures/canada/lg/banff_river_3.jpg',
+            marker: {
+                location: new google.maps.LatLng(51.157324, -115.664206),
+                options: {
+                    icon: {
+                        url: '../assets/pictures/canada/sm/banff_river_3_sm.jpg',
+                        scaledSize: {
+                            height: 50,
+                            width: 75,
+                        },
+                    },
+                },
+            },
+            destinatonKey: DestinationEnum.Canada,
+        },
+        {
+            name: 'Lake Louise',
+            picture: '../assets/pictures/canada/lg/lake_louise.jpg',
+            marker: {
+                location: new google.maps.LatLng(51.417263, -116.221889),
+                options: {
+                    icon: {
+                        url: '../assets/pictures/canada/sm/lake_louise_sm.jpg',
+                        scaledSize: {
+                            height: 50,
+                            width: 75,
+                        },
+                    },
+                },
+            },
+            destinatonKey: DestinationEnum.Canada,
+        },
+        {
+            name: 'Lake Louise',
+            picture: '../assets/pictures/canada/lg/lake_louise_2.jpg',
+            marker: {
+                location: new google.maps.LatLng(51.416574, -116.224958),
+                options: {
+                    icon: {
+                        url: '../assets/pictures/canada/sm/lake_louise_2_sm.jpg',
+                        scaledSize: {
+                            height: 50,
+                            width: 75,
+                        },
+                    },
+                },
+            },
+            destinatonKey: DestinationEnum.Canada,
+        },
+        {
+            name: 'Fairmont Chateau, Lake Louise',
+            picture: '../assets/pictures/canada/lg/lake_louise_3.jpg',
+            marker: {
+                location: new google.maps.LatLng(51.413845, -116.230264),
+                options: {
+                    icon: {
+                        url: '../assets/pictures/canada/sm/lake_louise_3_sm.jpg',
+                        scaledSize: {
+                            height: 50,
+                            width: 75,
+                        },
+                    },
+                },
+            },
+            destinatonKey: DestinationEnum.Canada,
+        },
     ],
 };
