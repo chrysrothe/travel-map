@@ -3,6 +3,7 @@ import { DestinationEnum } from '../enums/destination.enum';
 import { perthSpots } from './perth-spots';
 import { sydneySpots } from './sydney-spots';
 import { westernAustraliaSpots } from './western-australia';
+import { kununurraSpots } from './kununurra-spots';
 
 export const australia: Destination = {
     key: DestinationEnum.Australia,
@@ -17,6 +18,7 @@ export const australia: Destination = {
     spots: [
        ...perthSpots,
        ...westernAustraliaSpots,
+       ...kununurraSpots,
        ...sydneySpots,
     ],
 };

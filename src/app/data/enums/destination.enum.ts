@@ -6,4 +6,5 @@ export enum DestinationEnum {
     Australia = 'australia',
     Cambodia = 'cambodia',
     Switzerland = 'switzerland',
+    Macau = 'macau',
 }

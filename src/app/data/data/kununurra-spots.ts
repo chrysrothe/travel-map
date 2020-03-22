@@ -1,15 +1,15 @@
 import { Spot } from '../models/destination.model';
 import { DestinationEnum } from '../enums/destination.enum';
 
-export const perthSpots: Spot[] = [
+export const kununurraSpots: Spot[] = [
     {
-        name: 'Skyline of Perth',
-        picture: '../assets/pictures/australia/lg/perth_skyline.jpg',
+        name: 'Sunset at Kelly\'s Knob',
+        picture: '../assets/pictures/australia/lg/kellys_knob.jpg',
         marker: {
-            location: new google.maps.LatLng(-31.956734, 115.851097),
+            location: new google.maps.LatLng(-15.765275, 128.742432),
             options: {
                 icon: {
-                    url: '../assets/pictures/australia/sm/perth_skyline_sm.jpg',
+                    url: '../assets/pictures/australia/sm/kellys_knob_sm.jpg',
                     scaledSize: {
                         height: 50,
                         width: 75,
@@ -20,13 +20,13 @@ export const perthSpots: Spot[] = [
         destinatonKey: DestinationEnum.Australia,
     },
     {
-        name: 'Kings Park and Botanic Garden',
-        picture: '../assets/pictures/australia/lg/kings_park.jpg',
+        name: 'Kangaroo, Kelly\'s Knob',
+        picture: '../assets/pictures/australia/lg/kellys_knob_kangaroo.jpg',
         marker: {
-            location: new google.maps.LatLng(-31.959582, 115.843425),
+            location: new google.maps.LatLng(-15.764987, 128.740983),
             options: {
                 icon: {
-                    url: '../assets/pictures/australia/sm/kings_park_sm.jpg',
+                    url: '../assets/pictures/australia/sm/kellys_knob_kangaroo_sm.jpg',
                     scaledSize: {
                         height: 50,
                         width: 75,
@@ -37,13 +37,13 @@ export const perthSpots: Spot[] = [
         destinatonKey: DestinationEnum.Australia,
     },
     {
-        name: 'Heirisson Island',
-        picture: '../assets/pictures/australia/lg/kangaroo_island.jpg',
+        name: 'Kununurra',
+        picture: '../assets/pictures/australia/lg/kununurra.jpg',
         marker: {
-            location: new google.maps.LatLng(-31.9648397, 115.8814176),
+            location: new google.maps.LatLng(-15.773577, 128.745458),
             options: {
                 icon: {
-                    url: '../assets/pictures/australia/sm/kangaroo_island_sm.jpg',
+                    url: '../assets/pictures/australia/sm/kununurra_sm.jpg',
                     scaledSize: {
                         height: 50,
                         width: 75,
@@ -54,13 +54,13 @@ export const perthSpots: Spot[] = [
         destinatonKey: DestinationEnum.Australia,
     },
     {
-        name: 'Sunset at Scarborough Beach',
-        picture: '../assets/pictures/australia/lg/scarborough_beach_sunset.jpg',
+        name: 'Mirima National Park',
+        picture: '../assets/pictures/australia/lg/mirima.jpg',
         marker: {
-            location: new google.maps.LatLng(-31.8944023, 115.7553263),
+            location: new google.maps.LatLng(-15.768201, 128.750982),
             options: {
                 icon: {
-                    url: '../assets/pictures/australia/sm/scarborough_beach_sunset_sm.jpg',
+                    url: '../assets/pictures/australia/sm/mirima_sm.jpg',
                     scaledSize: {
                         height: 50,
                         width: 75,
@@ -71,13 +71,13 @@ export const perthSpots: Spot[] = [
         destinatonKey: DestinationEnum.Australia,
     },
     {
-        name: 'Qoukkas on Rottnest Island',
-        picture: '../assets/pictures/australia/lg/quokka.jpg',
+        name: 'Mirima National Park',
+        picture: '../assets/pictures/australia/lg/mirima_2.jpg',
         marker: {
-            location: new google.maps.LatLng(-32.006294, 115.528005),
+            location: new google.maps.LatLng(-15.767035, 128.750050),
             options: {
                 icon: {
-                    url: '../assets/pictures/australia/sm/quokka_sm.jpg',
+                    url: '../assets/pictures/australia/sm/mirima_2_sm.jpg',
                     scaledSize: {
                         height: 50,
                         width: 75,
@@ -88,13 +88,13 @@ export const perthSpots: Spot[] = [
         destinatonKey: DestinationEnum.Australia,
     },
     {
-        name: 'Australia Day in Perth',
-        picture: '../assets/pictures/australia/lg/australia_day.jpg',
+        name: 'Sitting on the edge, Mirima National Park',
+        picture: '../assets/pictures/australia/lg/wall.jpg',
         marker: {
-            location: new google.maps.LatLng(-31.961765, 115.867526),
+            location: new google.maps.LatLng(-15.761245, 128.751734),
             options: {
                 icon: {
-                    url: '../assets/pictures/australia/sm/australia_day_sm.jpg',
+                    url: '../assets/pictures/australia/sm/wall_sm.jpg',
                     scaledSize: {
                         height: 50,
                         width: 75,
@@ -105,13 +105,13 @@ export const perthSpots: Spot[] = [
         destinatonKey: DestinationEnum.Australia,
     },
     {
-        name: 'Elizabeth Quay, Perth',
-        picture: '../assets/pictures/australia/lg/elizabeth_quay.jpg',
+        name: 'Boab Tree',
+        picture: '../assets/pictures/australia/lg/boab_tree.jpg',
         marker: {
-            location: new google.maps.LatLng(-31.957735, 115.856780),
+            location: new google.maps.LatLng(-15.794547, 128.689542),
             options: {
                 icon: {
-                    url: '../assets/pictures/australia/sm/elizabeth_quay_sm.jpg',
+                    url: '../assets/pictures/australia/sm/boab_tree_sm.jpg',
                     scaledSize: {
                         height: 50,
                         width: 75,

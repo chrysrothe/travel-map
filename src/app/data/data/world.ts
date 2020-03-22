@@ -4,6 +4,7 @@ import { DestinationEnum } from '../enums/destination.enum';
 import { canada } from './canada';
 import { singapore } from './singapore';
 import { hongkong } from './hongkong';
+import { macau } from './macau';
 import { australia } from './australia';
 import { cambodia } from './cambodia';
 import { switzerland } from './switzerland';
@@ -21,6 +22,7 @@ export const world: Destination = {
         switzerland,
         cambodia,
         singapore,
+        macau,
         hongkong,
         australia,
     ],
