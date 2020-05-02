@@ -30,13 +30,30 @@ export const switzerland: Destination = {
             destinatonKey: DestinationEnum.Switzerland,
         },
         {
-            name: 'View on Old Middle Bridge From Wettsteinbrücke',
+            name: 'View on Old Middle Bridge from Wettsteinbrücke',
             picture: '../assets/pictures/basel/lg/basel1.jpg',
             marker: {
                 location: new google.maps.LatLng(47.556518, 7.596050),
                 options: {
                     icon: {
                         url: '../assets/pictures/basel/sm/basel1_sm.jpg',
+                        scaledSize: {
+                            height: 50,
+                            width: 75,
+                        },
+                    },
+                },
+            },
+            destinatonKey: DestinationEnum.Switzerland,
+        },
+        {
+            name: 'View on Old Middle Bridge',
+            picture: '../assets/pictures/basel/lg/old_bridge_2.jpg',
+            marker: {
+                location: new google.maps.LatLng(47.558663, 7.589822),
+                options: {
+                    icon: {
+                        url: '../assets/pictures/basel/sm/old_bridge_2_sm.jpg',
                         scaledSize: {
                             height: 50,
                             width: 75,

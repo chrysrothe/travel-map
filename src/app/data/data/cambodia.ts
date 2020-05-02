@@ -254,7 +254,7 @@ export const cambodia: Destination = {
         },
         {
             name: 'Terrace of Elephants',
-            picture: '../assets/pictures/cambodia/lg/terrace_elephants_3.jpg',
+            picture: '../assets/pictures/cambodia/lg/terrace_elephants.jpg',
             marker: {
                 location: new google.maps.LatLng(13.446136, 103.858772),
                 options: {
