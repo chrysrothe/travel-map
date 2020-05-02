@@ -4,7 +4,7 @@ import { DestinationEnum } from '../enums/destination.enum';
 export const cambodia: Destination = {
     key: DestinationEnum.Cambodia,
     location: {
-        latlng: new google.maps.LatLng(12.5008332,104.7913594),
+        latlng: new google.maps.LatLng(12.5008332, 104.7913594),
         zoom: 7,
     },
     name: 'Cambodia',
